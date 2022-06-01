@@ -79,15 +79,29 @@ namespace Práctica3
                         break;
 
                     case 5:
-                        Articulo.Articulo art = new Articulo.Articulo(1, "Arroz", 2030, 58)
+                        /*Articulo.Articulo art = new Articulo.Articulo(1, "Arroz", 2030, 58)
                         {
                             Codigo = 123,
                             Descripcion = "Arroz",
                             Precio = 2030,
                             Cantidad = 10
                         };
-                       Console.WriteLine("El {0} paga {1:0.00} CRC de IVA", art.Descripcion, art.CalcularIVA());
+                        */
+                        //Console.WriteLine("El {0} paga {1:0.00} CRC de IVA", art.Descripcion, art.CalcularIVA());
+                        Console.Write("Cual es el precio: ");
+                        double precio = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine();
 
+                        Console.Write("Cual es el iva ");
+                        double iva = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine();
+
+                        Console.Write("Cual es el descuento ");
+                        double descuento = Convert.ToDouble(Console.ReadLine());
+
+                        Articulo.Articulo art = new Articulo.Articulo();
+                        
+                        Console.WriteLine(" El precio del articulo es: "+ art.CalcularPrecio(precio,iva,descuento));
                         break;
                     case 6:
                         Console.WriteLine("Salir");
